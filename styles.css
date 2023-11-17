@@ -4,6 +4,9 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Estilize o cabeçalho */
@@ -16,9 +19,17 @@ header {
     padding: 10px 20px;
 }
 
-#logo {
-    max-width: 100px; /* Defina a largura máxima da imagem de acordo com suas preferências */
-    height: auto;
+.logo {
+    margin-left: -6px;
+    display: inline-flex;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+}
+
+.titulo {
+    display: block;
+    font-size: small;
 }
 
 header h1 {
@@ -41,13 +52,73 @@ nav ul li {
 
 nav a {
     color: #fff;
+    font-size: larger;
     text-decoration: none;
     text-align: center;
 }
 
+nav a:hover {
+    color: gray
+}
+
 /* Estilize os projetos */
+.projetos {
+    margin-left: 15px; 
+    margin-right: 15px;
+    margin-bottom: 50px;
+}
+
 .projeto {
     margin-bottom: 50px;
+}
+
+.galeria {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    display: inline-block;
+}
+
+.galeria img {
+    border: 1px solid #333;
+    max-width: 600px;
+    margin-bottom: 10px;
+    margin-left: 10px
+}
+
+.anterior, .proximo {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.anterior {
+    left: -24px;
+}
+
+.proximo {
+    right: -32px;
+    border-radius: 3px 0 0 3px;
+}
+
+.anterior:hover, .proximo:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.8)
+}
+
+#informacoes a {
+    display: block;
+    margin-bottom: 8px;
 }
 
 /* Estilize o rodapé */
@@ -55,6 +126,20 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
+    margin-top: auto;
     padding-top: 10px;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
+}
+
+.link {
+    display: inline;
+    color: #4169E1;
+}
+
+.link:visited{
+    color: #6A5ACD;
+}
+
+.link:hover {
+    color: red
 }
