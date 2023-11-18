@@ -81,9 +81,9 @@ nav a:hover {
 
 .galeria img {
     border: 1px solid #333;
-    max-width: 50%;
-    width: auto; /* Garante que a largura se ajuste automaticamente ao tamanho máximo */
-    height: auto; /* Garante que a altura se ajuste proporcionalmente à largura */
+    max-width: 75%;
+    width: auto;
+    height: auto;
     margin-bottom: 10px;
     margin-left: 3%
 }
@@ -104,11 +104,11 @@ nav a:hover {
 }
 
 .anterior {
-    left: -0.24%;
+    left: -0.42%;
 }
 
 .proximo {
-    right: 43.6%;
+    right: 18.4%;
     border-radius: 3px 0 0 3px;
 }
 
