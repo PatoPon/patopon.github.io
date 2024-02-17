@@ -85,26 +85,31 @@ nav a:hover {
     margin-bottom: 50px;
 }
 
+.imagem {
+    border: 1px solid #333;
+    max-width: 50%;
+}
+
 .galeria {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     position: relative;
     display: inline-block;
+    max-width: 80%;
+    margin-right: 10%;
+    margin-left: 10%
 }
 
 .galeria img {
     border: 1px solid #333;
-    max-width: 80%;
-    margin-bottom: 10px;
-    margin-left: 3%
+    max-width: 100%;
 }
 
 @media only screen and (max-width: 768px) {
     .galeria img {
-        max-width: 90%;
+        max-width: 100%;
         width: 100%;
-        margin-left: 4%;
     }
 }
 
@@ -112,10 +117,9 @@ nav a:hover {
 .proximo {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 48%;
     width: auto;
-    margin-top: -22px;
-    padding: 16px;
+    padding: 2%;
     color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 18px;
@@ -124,25 +128,12 @@ nav a:hover {
     user-select: none;
 }
 
-@media only screen and (max-width: 768px) {
-    .anterior, .proximo {
-        max-width: 75%;
-    }
-}
-
 .anterior {
-    left: -1%;
+    right: 102.5%;
 }
 
 .proximo {
-    right: 12.9%;
-    border-radius: 3px 0 0 3px;
-}
-
-@media only screen and (max-width: 768px) {
-    .proximo {
-        right: 0.5%;
-    }
+    left: 102.5%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -155,7 +146,7 @@ nav a:hover {
 
 #informacoes a {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
 }
 
 /* Estilize o rodapé */
