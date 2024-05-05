@@ -1,173 +1,183 @@
 /* styles.css */
 
-/* Estilize o corpo do documento */
+@font-face {
+    font-family: 'matrix';
+    src: url('./matrix.ttf') format('ttf'), /* Formato da fonte WOFF2 */
+         url('./matrix.ttf') format('ttf'); /* Formato da fonte WOFF */
+}
+
+/* Estilos gerais */
+html {
+    background: black;
+    width: 100%;
+}
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Estilize o cabeçalho */
-header {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1% 2%;
-}
-
-.logo {
-    margin-left: -0.6%;
-    display: inline-flex;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 2.5%;
-}
-
-.imagemLogo {
-    max-width: 15%; 
-    width: 100%; 
-    height: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    .imagemLogo {
-        max-width: 20%; 
-        width: 100%; 
-        height: 100%;
-    }
-}
-
-.titulo {
-    display: block;
-    font-size: small;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav {
-    text-align: left;
-}
-
-nav ul {
-    list-style-type: none;
     padding: 0;
+    width: 100%;
 }
 
-nav ul li {
-    display: inline;
+.animacao-aparecer {
+    opacity: 0; /* Comece com a opacidade a 0 para que o body seja invisível inicialmente */
+    animation: fadeIn 1s ease forwards; /* Defina a animação */
 }
 
-nav a {
-    color: #fff;
-    font-size: larger;
-    text-decoration: none;
-    text-align: center;
-}
-
-nav a:hover {
-    color: gray
-}
-
-/* Estilize os projetos */
-.projetos {
-    margin-left: 1.2%;
-    margin-right: 1.5%;
-    margin-bottom: 5%;
-}
-
-.projeto {
-    margin-bottom: 50px;
-}
-
-.imagem {
-    border: 1px solid #333;
-    max-width: 50%;
-}
-
-.galeria {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: relative;
-    display: inline-block;
-    max-width: 80%;
-    margin-right: 10%;
-    margin-left: 10%
-}
-
-.galeria img {
-    border: 1px solid #333;
-    max-width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    .galeria img {
-        max-width: 100%;
-        width: 100%;
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* No início da animação, o body está invisível */
+    }
+    100% {
+        opacity: 1; /* No final da animação, o body está totalmente visível */
     }
 }
 
-.anterior,
-.proximo {
-    cursor: pointer;
+canvas {
     position: absolute;
-    top: 48%;
-    width: auto;
-    padding: 2%;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-.anterior {
-    right: 102.5%;
+header {
+    position: absolute;
+    line-height: 10px;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: #0F0;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.proximo {
-    left: 102.5%;
+.texto-animado {
+    opacity: 0; /* Comece com a opacidade a 0 para que o texto seja invisível inicialmente */
+    transform: translateY(-50px); /* Mova o texto para cima para que ele desça depois */
+    animation: slideDown 1.5s ease forwards; /* Defina a animação */
 }
 
-@media only screen and (min-width: 768px) {
-    .anterior:hover,
-    .proximo:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        color: rgba(255, 255, 255, 0.8)
+@keyframes slideDown {
+    0% {
+        opacity: 0; /* No início da animação, o texto está invisível */
+        transform: translateY(-50px); /* Mova o texto para cima */
+    }
+    100% {
+        opacity: 1; /* No final da animação, o texto está totalmente visível */
+        transform: translateY(0); /* Traga o texto de volta à sua posição original */
     }
 }
 
-#informacoes a {
-    display: block;
-    margin-bottom: 2px;
+.container {
+    display: flex;
+    justify-content: center;
 }
 
-/* Estilize o rodapé */
+img {
+    width: 40%;
+}
+
+section {
+    padding: 50px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    border: 2px solid #333; /* Substitua #000 pela cor desejada */
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+#dourado {
+    color: gold;
+}
+
+#cor-matrix {
+    font-style: oblique;
+    color: #0F0;
+}
+
+.caracteristicas {
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0, 0.8);
+    color: white; 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin-top: -22px;
+}
+
+.grid-container > div {
+    background-color: #111111;
+    color: #fff;
+    border: 2px solid #333; /* Substitua #000 pela cor desejada */
+    border-radius: 10px;
+    display: flex; /* Torna o elemento um container flexível */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: center; /* Alinha os itens horizontalmente no centro */
+    text-align: center;
+    margin: 20px;
+    height: 100px;
+    padding: 30px;
+    font-size: 20px;
+}
+
 footer {
     background-color: #333;
     color: #fff;
+    padding: 20px;
     text-align: center;
-    margin-top: auto;
-    padding-top: 1%;
-    padding-bottom: 1.5%;
 }
 
-.link {
-    display: inline;
-    color: #4169E1;
+/* Estilos específicos */
+#banner {
+    background-image: url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
 }
 
-.link:visited {
-    color: #6A5ACD;
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.link:hover {
-    color: red
+.btn:hover {
+    background-color: #0056b3;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
 }
