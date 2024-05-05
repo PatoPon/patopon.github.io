@@ -5,25 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emily Novaes</title>
-    <link rel="stylesheet" href="patopon.github.io/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="texto-animado">
-        <h1>BEM-VINDO À MATRIX</h1>
+        <div class="header-content">
+            <img style="width: 25vw; max-width: 200px; height: auto;" src="pessoa.png" alt="Descrição da imagem">
+            <h1>BEM-VINDO À<br> MATRIX</h1>
+        </div>
     </header>
 
     <div class="container animacao-aparecer" id="destaque">
-        <img src="pessoa.png" alt="Descrição da Imagem">
-
         <section>
-            <h2>
+            <h2 style="font-size: min(5vw, 20px)">
                 APRENDA A MULTIPLICAR SEU<br>
-                <span id="dourado" style="font-size: 40px; font-family: 'Courier New', Courier, monospace;">
+                <span id="dourado" style="font-size: min(10vw, 30px); font-family: 'Courier New', Courier, monospace;">
                     FATURAMENTO
                 </span><br>
                 COM TÉCNICAS EXCLUSIVAS DE LIDERANÇA E VENDA
             </h2>
-            <p style="font-size: 18px; font-family: 'Courier New', Courier, monospace;">
+            <p style="font-size: min(3.5vw, 15px); font-family: 'Courier New', Courier, monospace;">
                 O treinamento <span id="cor-matrix">VENDAS MATRIX: DECODIFICANDO O SUCESSO</span> 
                 foi criado para ajudar seu negócio e multiplicar 
                 seus resultados ainda em 2024, através de 
@@ -32,19 +33,15 @@
         </section>    
     </div>
 
-    <div class="caracteristicas">
-        <h2 style="margin-left: 21px;">Nesse curso você vai aprender:</h2>
-
-        <div class="grid-container animacao-aparecer">
-            <div>Entender e utilizar multicanais digitais de vendas;</div>
-            <div>Posicionar de forma estratégica a sua marca e o seu negócio;</div>
-            <div>Entender os perfis de clientes e colaboradores do seu negócio e aprender as melhores estratégias de comunicação;</div>
-            <div>Profissionalizar o WhatsApp Business da sua empresa;</div>
-            <div>Liderar sua vida e melhorar seus negócios;</div>
-            <div>Ferramentas de inteligência artificial e estratégias de redes sociais;</div>
-            <div>Como gerir suas finanças;</div>
-            <div>A importância do networking e das portas que ele abre.</div>
-        </div>
+    <div class="grid-container">
+        <p>Entender e utilizar multicanais digitais de vendas;</p>
+        <p>Posicionar de forma estratégica a sua marca e o seu negócio;</p>
+        <p>Entender os perfis de clientes e colaboradores do seu negócio e aprender as melhores estratégias de comunicação;</p>
+        <p>Profissionalizar o WhatsApp Business da sua empresa;</p>
+        <p>Liderar sua vida e melhorar seus negócios;</p>
+        <p>Ferramentas de inteligência artificial e estratégias de redes sociais;</p>
+        <p>Como gerir suas finanças;</p>
+        <p>A importância do networking e das portas que ele abre.</p>
     </div>
     
     <canvas id="Matrix" style="width: 100%; z-index: -1"></canvas>
