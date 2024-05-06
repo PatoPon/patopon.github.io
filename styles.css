@@ -16,7 +16,7 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70vw;
+    width: 90vw;
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(0, 0, 0, 0.8);
@@ -34,7 +34,6 @@ canvas {
 
 section {
     align-items: center;
-    max-width: min(80vw, 600px);
     height: auto;
     text-align: center;
     color: white;
@@ -44,6 +43,16 @@ section {
     margin-top: 20px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.caracteristicas-titulo {
+    padding: 20px;
+    background-color: #111111;
+    border: 5px solid #333;
+    color: #FFF;
+    text-align: center;
+    margin-top: 10px;
+    font-size: max(2vw, 20px);
 }
 
 .grid-container {
@@ -59,6 +68,7 @@ section {
 }
 
 .grid-container > p {
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,24 +90,42 @@ section {
     }
 }
 
-
-footer {
-    background-color: #333;
-    color: #fff;
+.btn {  
+    display:flex; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    align-items: center; 
     padding: 20px;
-    text-align: center;
+    background-color: gold;
+    color: white;
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .btn {
+        font-size: 4vw;
+     }
+}
+
+button:hover {
+    background-color: rgb(204, 173, 0);
+}
+
+.texto-dayana {
+    padding: 10px;
+    font-size: 2vw;
+}
+
+@media (max-width: 700px) {
+    .texto-dayana {
+        font-size: 6vw;
+     }
 }
 
 /* Estilos específicos */
-#banner {
-    background-image: url('banner.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 100px 0; /* Aumente o preenchimento para melhor legibilidade em dispositivos móveis */
-    font-size: 1.5rem; /* Tamanho de fonte responsivo */
-}
-
 #dourado {
     color: gold;
 }
